@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    engiven (0.0.1)
+    engiven (0.0.2)
       faraday
       json
 
