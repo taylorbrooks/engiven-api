@@ -4,12 +4,14 @@ require './lib/engiven/version'
 require './lib/engiven/resources/customer'
 require './lib/engiven/resources/fund'
 require './lib/engiven/resources/gift'
+require './lib/engiven/resources/misc'
 
 module EngivenAPI
   class Client
     include EngivenAPI::Client::Customer
     include EngivenAPI::Client::Fund
     include EngivenAPI::Client::Gift
+    include EngivenAPI::Client::Misc
 
     attr_reader :api_key, :test_mode, :logger, :connection, :adapter, :ssl
 
@@ -44,7 +46,7 @@ module EngivenAPI
       headers = {
         accept: 'application/json',
         'Authorization' => api_key,
-        'User-Agent' => "engiven-api-ruby-gem/v#{EngivenAPI::VERSION}",
+        'User-Agent' => "engiven-api-ruby-gem/v#{EngivenAPI::VERSION}"
       }
 
       client_opts = {
