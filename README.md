@@ -15,7 +15,8 @@ Add this line to your application's Gemfile:
 
 ### Usage
 ````ruby
-  client = EngivenAPI::Client.new(api_key: {{ api_key }})
+  api_key = 'YOUR_API_KEY_HERE'
+  client = EngivenAPI::Client.new(api_key: api_key)
 
   # List Customers
   client.list_customers(params)
