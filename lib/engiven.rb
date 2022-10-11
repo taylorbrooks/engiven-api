@@ -1,4 +1,4 @@
-require './lib/engiven/client'
+require 'engiven/client'
 
 module EngivenAPI
 end

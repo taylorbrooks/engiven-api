@@ -1,10 +1,10 @@
 require 'faraday'
 
-require './lib/engiven/version'
-require './lib/engiven/resources/customer'
-require './lib/engiven/resources/fund'
-require './lib/engiven/resources/gift'
-require './lib/engiven/resources/misc'
+require 'engiven/version'
+require 'engiven/resources/customer'
+require 'engiven/resources/fund'
+require 'engiven/resources/gift'
+require 'engiven/resources/misc'
 
 module EngivenAPI
   class Client
