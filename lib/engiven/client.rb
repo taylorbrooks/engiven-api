@@ -59,6 +59,7 @@ module EngivenAPI
       Faraday.new(client_opts) do |conn|
         conn.request  :json
         conn.response :logger if logger
+        conn.response :raise_error
         conn.response :json
         conn.adapter  adapter
       end
