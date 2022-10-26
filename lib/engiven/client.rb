@@ -1,6 +1,7 @@
 require 'faraday'
 
 require 'engiven/version'
+require 'engiven/error'
 require 'engiven/resources/customer'
 require 'engiven/resources/fund'
 require 'engiven/resources/gift'
@@ -59,7 +60,7 @@ module EngivenAPI
       Faraday.new(client_opts) do |conn|
         conn.request  :json
         conn.response :logger if logger
-        conn.response :raise_error
+        conn.response :engiven_error_handler
         conn.response :json
         conn.adapter  adapter
       end
